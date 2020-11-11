@@ -18,7 +18,7 @@ public class NativeAppTest {
     @BeforeClass
     public void setup() throws Exception {
         DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Pixel 3a API 30");
+        capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Nexus 5 API 30");
         capabilities.setCapability(MobileCapabilityType.UDID, "emulator-5554");
         URL serverAddress = new URL("http://0.0.0.0:4723/wd/hub");
 
