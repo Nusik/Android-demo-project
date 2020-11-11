@@ -10,6 +10,7 @@ public class HomePage extends BasePage{
     protected By rootElement = By.cssSelector("div#navbar-brand-centered");
     protected By newTourButton = By.cssSelector("a[href*='newtours']");
     protected By agileProjectButton = By.cssSelector("a[href*='Agile'");
+    protected By seleniumDropDown = By.cssSelector("a.dropdown-toggle");
     protected By tableDemoLink = By.cssSelector("a[href*='table'");
 
     public void clickNewTourButton() {
