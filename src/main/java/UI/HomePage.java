@@ -1,36 +1,27 @@
 package UI;
 
 import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import org.openqa.selenium.By;
-import org.openqa.selenium.support.PageFactory;
 
-public class HomePage extends BasePage{
+public class HomePage extends BasePage {
 
     protected By rootElement = By.cssSelector("div#navbar-brand-centered");
-    protected By newTourButton = By.cssSelector("a[href*='newtours']");
-    protected By agileProjectButton = By.cssSelector("a[href*='Agile'");
-    protected By seleniumDropDown = By.cssSelector("a.dropdown-toggle");
-    protected By tableDemoLink = By.cssSelector("a[href*='table'");
-
-    public void clickNewTourButton() {
-      $(rootElement).find(newTourButton).click();
-    }
-
-    public void clickAgileProjectButton() {
-        $(rootElement).find(agileProjectButton).click();
-    }
-
-    public void clickTableDemoLink() {
-        $(rootElement).find(tableDemoLink).click();
-    }
+    protected By newTourButton = By.xpath("//a[contains(text(),'New Tours')]");
+    protected By agileProjectButton = By.xpath("//a[contains(text(),'Agile Project')]");
 
     public HomePage(AppiumDriver driver) {
         appiumDriver = driver;
-        PageFactory.initElements(new AppiumFieldDecorator(this.appiumDriver), this);
     }
 
     public void navigate() {
         appiumDriver.get("http://demo.guru99.com/");
+    }
+
+    public void clickAgileProjectButton() {
+        appiumDriver.findElement(agileProjectButton).click();
+    }
+
+    public void clickNewToursButton() {
+        appiumDriver.findElement(newTourButton).click();
     }
 }
