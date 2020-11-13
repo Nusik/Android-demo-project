@@ -35,7 +35,7 @@ public class MobileWebTest {
         capabilities.setCapability(CapabilityType.BROWSER_NAME, "Chrome");
         capabilities.setCapability("appium:chromeOptions", ImmutableMap.of("w3c", false));
         capabilities.setCapability("chromedriverExecutableDir",
-                "C:\\Users\\User\\.m2\\repository\\webdriver\\chromedriver\\win32\\86.0.4240.198");
+                "C:\\Users\\User\\.m2\\repository\\webdriver\\chromedriver\\win32\\86.0.4240.22");
 
         URL serverAddress = new URL("http://0.0.0.0:4723/wd/hub");
         capabilities.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 5000);
